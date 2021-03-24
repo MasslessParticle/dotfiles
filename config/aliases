@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# git
+alias gpr="git pull --rebase"
+alias gpp="git pull --rebase && git push"
+alias gs="git status"
+alias gst="git status"
+alias gl="git log --graph --oneline"
+
+# system
+alias ll="ls -la"
+alias lal="ls -lA"
+alias grep='grep --color=auto'
+alias nocaps='/usr/bin/setxkbmap -layout us -option ctrl:nocaps'
+alias python='python3'
+alias pip='pip3'
+
+# projects
+alias dotfiles="cd ~/workspace/dotfiles"
+
+# quick logins
+
+# wrappers
+alias vim='nvim'
+alias mvim='nvim'
+
+if ! which pbcopy >/dev/null; then
+  alias pbcopy='DISPLAY=:1 xclip -selection c'
+fi
+
+# tools
+
+# Makes ./ work to reference the current package, e.g.,
+# `gomvpkg -from ./foo -to ./bar`
+function gomvpkg {
+    command gomvpkg $(echo "$@" | sed -e "s, ./, ${PWD##$GOPATH/src/}/,g")
+}
