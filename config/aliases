@@ -8,6 +8,7 @@ alias gst="git status"
 alias gl="git log --graph --oneline"
 
 # system
+alias ls="ls --color=auto"
 alias ll="ls -la"
 alias lal="ls -lA"
 alias grep='grep --color=auto'
