@@ -56,6 +56,8 @@ mkdir -p $HOME/.config/nvim
 
 echo_header "link dotfiles"
 ln -sf $SRC/init.vim $HOME/.config/nvim/init.vim
+ln -sf $SRC/coc-settings.json $HOME/.config/nvim.coc-settings.json
+
 rcup -fv -x gitconfig -x init.vim -d config
 echo_footer "dotfiles linked"
 
@@ -71,17 +73,6 @@ source $HOME/.aliases
 echo_header "Install NeoVim plugins"
 nvim +PlugInstall +GoInstallBinaries +qall
 echo_footer "NeoVim plugins installed"
-
-# Install Oh My ZSH if we haven't already done so
-# echo_header "Install bash-it"
-# if [ ! -f $HOME/.bash-it ]; then
-#     git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
-#     ~/.bash_it/install.sh
-# fi
-
-# ln -sf ~/workspace/dotfiles/assets/agnoster-duet.zsh-theme $HOME/.oh-my-zsh/themes
-# rcup -fv -d config zshrc
-# echo_footer "bash-it installed"
 
 rm -f $HOME/.gitconfig
 git config --global include.path "$SRC"/gitconfig
