@@ -19,7 +19,7 @@ sudo apt-get install -qq -y automake autoconf autotools-dev build-essential pkg-
 sudo apt-get install -qq -y tmux git curl htop tree silversearcher-ag openssh-server
 sudo apt-get install -qq -y python3 python3-pip jq
 sudo apt-get install -qq -y libxml2 libxml2-dev libcurl4-gnutls-dev
-sudo apt-get install -qq -y fonts-inconsolata gnome-tweak-tool httpie
+sudo apt-get install -qq -y fonts-inconsolata gnome-tweaks httpie
 sudo apt-get install -qq -y direnv neovim xclip
 
 echo_footer "finished apt-get"
