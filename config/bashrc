@@ -72,14 +72,15 @@ function color_my_prompt {
     local __cur_location="\W"
     local __git_info='$(__git_ps1 "(%s)")'
     local __prompt_tail="$PURPLE$"
+    local __date='[$(date +%T)]'
     if [ $EXIT -gt 0 ]; then
         __prompt_tail="$RED$EXIT $__prompt_tail"
     fi
 
     if [[ -z $(__git_ps1 "(%s)") ]]; then
-        export PS1="$GREEN$__user_and_host $BLUE$__cur_location $__prompt_tail$NO_COLOR "
+        export PS1="$GREEN$__date $__user_and_host $BLUE$__cur_location $__prompt_tail$NO_COLOR "
     else
-        export PS1="$GREEN$__user_and_host $BLUE$__cur_location $YELLOW$__git_info $__prompt_tail$NO_COLOR "
+        export PS1="$GREEN$__date $__user_and_host $BLUE$__cur_location $YELLOW$__git_info $__prompt_tail$NO_COLOR "
     fi
 }
 PROMPT_COMMAND=color_my_prompt
@@ -137,3 +138,5 @@ if [ -f '/usr/local/share/google-cloud-sdk/completion.bash.inc' ]; then . '/usr/
 # for chruby
 source /usr/local/share/chruby/chruby.sh
 
+export PATH=$PATH:/home/tpatterson/.local/share/JetBrains/Toolbox/scripts
+. "$HOME/.cargo/env"

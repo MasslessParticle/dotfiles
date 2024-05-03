@@ -10,3 +10,4 @@ export PATH=$PATH:$HOME/bin:$HOME/.bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/
 test -f /usr/local/share/chruby/chruby.sh && source /usr/local/share/chruby/chruby.sh
 test -f /usr/local/share/chruby/auto.sh && source /usr/local/share/chruby/auto.sh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"

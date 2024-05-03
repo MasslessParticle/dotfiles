@@ -16,6 +16,10 @@ alias nocaps='/usr/bin/setxkbmap -layout us -option ctrl:nocaps'
 alias python='python3'
 alias pip='pip3'
 
+# infra
+alias tk='~/workspace/deployment_tools/scripts/tanka/tk'
+alias gcom='~/workspace/deployment_tools/scripts/gcom/gcom'
+
 # projects
 alias dotfiles="cd ~/workspace/dotfiles"
 

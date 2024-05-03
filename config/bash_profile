@@ -2,3 +2,4 @@
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 export PATH="$HOME/.cargo/bin:$HOME/bin:$HOME/.npm/bin:$PATH"
+. "$HOME/.cargo/env"
